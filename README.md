@@ -117,6 +117,8 @@ The Bearer header in the snippets above is for developer integrations only, and 
 | `create_webhook` | bearer · change | Subscribe to events. |
 | `delete_webhook` | bearer · change | Remove a webhook. |
 
+An unauthenticated `tools/list` returns the first ten tools (the seven public ones plus `list_licenses`, `get_license` and `list_license_mentions`, which need a connected account to call). The remaining six belong to the developer catalog.
+
 Tools marked **change** modify a member's data. Run them only on an explicit instruction from the member who owns the key. Assistant connections are read-only.
 
 Rate limit: 100 requests/hour per key (10 in development mode). On `RATE_LIMITED` (429), wait for `Retry-After`.
