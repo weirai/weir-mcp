@@ -44,23 +44,13 @@ Seven tools are public and need no account. For a member's own licenses and ment
 
 ### Claude Desktop
 
-Add this entry to your `claude_desktop_config.json`:
+Add WEIR AI as a custom connector (this also works on claude.ai):
 
-```json
-{
-  "mcpServers": {
-    "weir-ai": {
-      "transport": {
-        "type": "http",
-        "url": "https://wapi.weir.ai/mcp",
-        "headers": {
-          "Authorization": "Bearer YOUR_WEIR_TOKEN"
-        }
-      }
-    }
-  }
-}
-```
+1. Open **Settings → Connectors** and choose **Add custom connector**.
+2. Name it `WEIR AI` and enter the URL `https://wapi.weir.ai/mcp`.
+3. Click **Add**. To reach your own licenses and mentions, click **Connect** and sign in to WEIR AI to approve read-only access.
+
+The seven public tools need no WEIR AI account. No API key or `claude_desktop_config.json` entry is needed.
 
 ### Cursor
 
@@ -94,7 +84,7 @@ Then point it at `https://wapi.weir.ai/mcp`.
 
 ### Developer tokens
 
-The Bearer header in the snippets above is for developer integrations only, and is optional: leave it out to use the public tools. Tokens come from `POST https://wapi.weir.ai/auth/token` with your API key and secret, the same flow as the REST API. See [Authentication](https://weir.ai/developers/mcp).
+The Bearer header in the Cursor snippet above is for developer integrations only, and is optional: leave it out to use the public tools. Tokens come from `POST https://wapi.weir.ai/auth/token` with your API key and secret, the same flow as the REST API. See [Authentication](https://weir.ai/developers/mcp).
 
 ## Tools
 
